@@ -50,3 +50,44 @@
   #root, #__next {
     isolation: isolate;
   }
+  /*General Variables*/
+  :root{
+    --background-color:hsl(30, 38%, 92%);
+    --dark-cyan:hsl(158, 36%, 37%);
+    --dark-blue:hsl(212, 21%, 14%);
+    --dark-gray-blue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+    --font-size:14px;
+    --font-family1:font-family: 'Montserrat', sans-serif;
+
+  }
+  body{
+    display:grid;
+    place-content: center;
+    background-color: var(--background-color);
+    font-family: var(--font-family1);
+  }
+  .perfume{
+    color:var(--dark-gray-blue);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+  main{
+    max-width: 21.563rem;
+    max-height: 38.125rem;
+    display:grid;
+  }
+  .container{
+    display:grid;
+    background-color: var(--white);
+  }
+  .perfume-picture{
+    border-radius: 1rem 1rem 0 0 ;
+  }
+.prices{
+    display:flex;
+    gap:1rem
+}
+p{
+    font-size: var(--font-size);
+}
