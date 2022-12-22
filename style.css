@@ -30,7 +30,7 @@
   */
   img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
   /*
     7. Remove built-in form typography styles
@@ -57,7 +57,7 @@
     --dark-blue:hsl(212, 21%, 14%);
     --dark-gray-blue:hsl(228, 12%, 48%);
     --white:hsl(0, 0%, 100%);
-    --font-size:14px;
+    --font-size:12px;
     --font-family1:font-family: 'Montserrat', sans-serif;
 
   }
@@ -72,22 +72,77 @@
     letter-spacing: 0.5em;
     text-transform: uppercase;
   }
+  .title{
+    color:var(--dark-blue);
+    font-weight: 700;
+  }
   main{
-    max-width: 21.563rem;
-    max-height: 38.125rem;
+    max-width: 20.563rem;
+    max-height: 38.125em;
     display:grid;
   }
   .container{
     display:grid;
     background-color: var(--white);
+    padding:2rem;
+    border-radius: 0 0 1rem 1rem;
   }
-  .perfume-picture{
+.perfume-picture{
     border-radius: 1rem 1rem 0 0 ;
-  }
+}
+.information{
+    color:var(--dark-gray-blue);
+    font-size: var(--font-size)
+}
+.current-price{
+    color: var(--dark-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.last-price{
+    text-decoration: line-through;
+}
 .prices{
     display:flex;
-    gap:1rem
+    gap:1rem;
+    align-items: center;
 }
 p{
     font-size: var(--font-size);
 }
+.button{
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    background-color:var(--dark-cyan);
+    color:var(--white);
+    padding:0.5rem;
+    border-radius: 0.5rem;
+}
+.button[data-icon="shopping-cart"]::before{
+    content:"";
+    width: 15px;
+    height: 16px;
+    background-image:url(images/icon-cart.svg);
+}
+@media (min-width: 600px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .container{
+        border-radius: 0 1rem 1rem 0 ;
+    
+    }
+    .perfume-picture{
+        border-radius: 1rem 0 0 1rem  ;
+    }
+    .perfume-photo{
+        width:18.75rem
+    }
+    
+    }
