@@ -129,6 +129,9 @@ p{
     height: 16px;
     background-image:url(images/icon-cart.svg);
 }
+.button:hover{
+    background-color:hsl(159, 100%, 11%) ;
+}
 @media (min-width: 600px) {
     main{
         grid-template-columns: 1fr 1fr;
